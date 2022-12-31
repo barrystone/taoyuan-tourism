@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, styled, CssBaseline } from '@mui/material';
+import Header from './Header';
 
 const PREFIX = 'LandingSection';
 const classes = {
@@ -13,7 +14,7 @@ const Root = styled('div')(({ theme }) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover'
   },
-  [`&.${classes.content}`]: {}
+  [`& .${classes.content}`]: {}
 }));
 
 const LandingSection = () => {
@@ -21,6 +22,7 @@ const LandingSection = () => {
     <Root className={classes.root}>
       {/* Avoidind any padding or margin */}
       <CssBaseline />
+      <Header />
       {/* <Typography className={classes.content}>
         Photo by{' '}
         <a href="https://unsplash.com/@angelalo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
