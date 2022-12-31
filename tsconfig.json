@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    // for Typescript project Material-UI recommand
+    // "lib": ["dom", "dom.iterable", "esnext", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,6 +16,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
+    // for Typescript project Material-UI recommand
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    // "strictNullChecks": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
