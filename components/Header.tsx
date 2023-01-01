@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   styled,
   AppBar,
   IconButton,
   Toolbar,
   alpha,
-  Grid
+  Grid,
+  Collapse
 } from '@mui/material';
 import {
   Sort as SortIcon,
@@ -80,6 +81,10 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 const Header = () => {
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => setChecked(true), []);
+
   return (
     <Root className={classes.root} style={{}}>
       <AppBar className={classes.appbar} elevation={0}>
@@ -92,15 +97,22 @@ const Header = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Grid container alignItems="center" direction="column">
-        <h1 className={classes.h1Title}>
-          Welcome to
-          <br /> <span className={classes.SpanStyleH1Text}>Taoyuan</span> City
-        </h1>
-        <IconButton>
-          <ExpandMoreIcon className={classes.godownIcon} />
-        </IconButton>
-      </Grid>
+      <Collapse
+        in={checked}
+        // style={{ transformOrigin: '0 0 0' }}
+        {...(checked ? { timeout: 1000 } : {})}
+        collapsedSize={50}
+      >
+        <Grid container alignItems="center" direction="column">
+          <h1 className={classes.h1Title}>
+            Welcome to
+            <br /> <span className={classes.SpanStyleH1Text}>Taoyuan</span> City
+          </h1>
+          <IconButton>
+            <ExpandMoreIcon className={classes.godownIcon} />
+          </IconButton>
+        </Grid>
+      </Collapse>
     </Root>
   );
 };
