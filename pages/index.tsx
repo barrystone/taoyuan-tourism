@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import LandingSection from '../components/LandingSection';
+import MainInfoSection from '../components/MainInfoSection';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <LandingSection />
+        <MainInfoSection />
       </main>
     </>
   );
