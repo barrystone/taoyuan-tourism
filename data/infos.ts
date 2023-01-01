@@ -1,7 +1,7 @@
 // const infos: Array<Object> = [
 const infos: Array<{ [name: string]: string }> = [
   {
-    title: 'Taoyuan Public Library',
+    title: 'Taoyuan Library',
     desc: 'Taoyuan Public Library is designed with the inspiration of "Tree of Life". It has 8 floors and a collection of nearly one million books.',
     image: '/assets/taoyuan-tourism-info-3.jpeg',
     more: 'https://travel.tycg.gov.tw/zh-tw/travel/attraction/1656'

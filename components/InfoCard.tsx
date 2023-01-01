@@ -20,9 +20,12 @@ const Root = styled('div')(({ theme }) => ({
   [`&.${classes.root}`]: {},
   [`& .${classes.card}`]: {
     maxWidth: 350,
+    minHeight: 600,
     background: alpha('#000', 0.5),
     fontFamily: 'Amatic SC',
-    paddingBottom: '.5rem'
+    paddingBottom: '.5rem',
+    margin: '1rem',
+    position: 'relative'
   },
   [`& .${classes.media}`]: {
     height: 340
@@ -42,7 +45,9 @@ const Root = styled('div')(({ theme }) => ({
     border: '0.05rem #ddd solid',
     padding: '.2rem 1rem',
     marginTop: '-.5rem',
-    borderRadius: '0'
+    borderRadius: '0',
+    position: 'absolute',
+    bottom: '1rem'
   }
 }));
 

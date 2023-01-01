@@ -13,7 +13,10 @@ const Root = styled('div')(({ theme }) => ({
     minHeight: '100vh',
     backgroundImage: `url(${'/assets/taoyuan-tourism-bg-2.jpeg'})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   [`& .${classes.content}`]: {}
 }));
